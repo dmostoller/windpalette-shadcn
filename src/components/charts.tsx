@@ -40,20 +40,12 @@ const barChartConfig = {
     label: "Revenue",
     color: "hsl(var(--chart-1))",
   },
-  profit: {
-    label: "Profit",
-    color: "hsl(var(--chart-2))",
-  },
 } satisfies ChartConfig;
 
 const areaChartConfig = {
   desktop: {
     label: "Desktop",
     color: "hsl(var(--chart-1))",
-  },
-  mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2))",
   },
 } satisfies ChartConfig;
 
@@ -92,14 +84,6 @@ export default function Charts() {
                   <ChartTooltip
                     cursor={false}
                     content={<ChartTooltipContent indicator="dot" />}
-                  />
-                  <Area
-                    dataKey="mobile"
-                    type="natural"
-                    fill={areaChartConfig.mobile.color}
-                    fillOpacity={0.4}
-                    stroke={areaChartConfig.mobile.color}
-                    stackId="a"
                   />
                   <Area
                     dataKey="desktop"
@@ -143,11 +127,6 @@ export default function Charts() {
                   <Bar
                     dataKey="revenue"
                     fill={barChartConfig.revenue.color}
-                    radius={[4, 4, 0, 0]}
-                  />
-                  <Bar
-                    dataKey="profit"
-                    fill={barChartConfig.profit.color}
                     radius={[4, 4, 0, 0]}
                   />
                 </BarChart>
