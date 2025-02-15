@@ -27,12 +27,9 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-16 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex items-center justify-between py-4 px-4  mx-auto">
-        <Link
-          href="/"
-          className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent"
-        >
+        <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
           Shadcn/ui Theme Demo
-        </Link>
+        </div>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-4">
@@ -42,7 +39,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link href="https://www.windpalette.com/app">
-            <Button>Main Site</Button>
+            <Button>Back To App</Button>
           </Link>
           <ModeToggle />
         </div>
