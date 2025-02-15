@@ -26,7 +26,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 export default function ComponentGallery() {
   return (
     <section id="component-gallery" className="py-24">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2">
         <h2 className="text-3xl font-bold text-center mb-12">
           Component Gallery
         </h2>

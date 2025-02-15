@@ -1,9 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="py-6 md:px-8 md:py-0">
+    <footer className="py-6 px-2 md:px-8 md:py-0">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
         <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-          This is a demo of a{" "}
           <a
             href="https://windpalette.com"
             target="_blank"
@@ -12,7 +11,7 @@ export default function Footer() {
           >
             WindPalette
           </a>{" "}
-          theme using{" "}
+          makes it easy to generate and customize stunning color themes for{" "}
           <a
             href="https://ui.shadcn.com"
             target="_blank"
@@ -21,9 +20,10 @@ export default function Footer() {
           >
             shadcn/ui
           </a>
-          . View the source code on{" "}
+          . Design, preview, and export your theme in minutes. View the source
+          code for this demo on{" "}
           <a
-            href="https://github.com/yourusername/windpalette-shadcn-demo"
+            href="https://github.com/dmostoller/windpalette-shadcn"
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-4"

@@ -21,8 +21,8 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="py-24">
-      <div className="container mx-auto">
+    <section className="py-24 mb-12">
+      <div className="container mx-auto px-2">
         <div className="max-w-xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">
             Subscribe to Our Newsletter

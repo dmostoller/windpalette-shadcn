@@ -25,7 +25,7 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="border-b">
+    <nav className="fixed top-0 left-0 right-0 z-50 h-16 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex items-center justify-between py-4 px-4  mx-auto">
         <Link href="/" className="text-2xl font-bold">
           Shadcn/ui Theme Demo
