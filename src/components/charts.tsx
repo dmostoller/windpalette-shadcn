@@ -55,10 +55,6 @@ const areaChartConfig = {
     label: "Mobile",
     color: "hsl(var(--chart-2))",
   },
-  tablet: {
-    label: "Tablet",
-    color: "hsl(var(--chart-3))",
-  },
 } satisfies ChartConfig;
 
 export default function Charts() {
@@ -111,14 +107,6 @@ export default function Charts() {
                     fill={areaChartConfig.desktop.color}
                     fillOpacity={0.4}
                     stroke={areaChartConfig.desktop.color}
-                    stackId="a"
-                  />
-                  <Area
-                    dataKey="tablet"
-                    type="natural"
-                    fill={areaChartConfig.tablet.color}
-                    fillOpacity={0.4}
-                    stroke={areaChartConfig.tablet.color}
                     stackId="a"
                   />
                 </AreaChart>
