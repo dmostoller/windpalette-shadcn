@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { generateShadcnTheme, getThemeFromURL } from "@/lib/generate-theme";
+import { LoadingScreen } from "./loading-screen";
 
 export function ThemeInjector() {
   const [themeStyle, setThemeStyle] = useState<string>("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const colors = getThemeFromURL();
@@ -12,14 +14,19 @@ export function ThemeInjector() {
       const theme = generateShadcnTheme(colors);
       setThemeStyle(theme);
     }
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
   }, []);
 
-  // Only inject custom theme styles if we have URL parameters
   if (!themeStyle) return null;
 
   return (
     <>
-      <style id="dynamic-theme">{themeStyle}</style>
+      {isLoading && <LoadingScreen />}
+      {themeStyle && <style id="dynamic-theme">{themeStyle}</style>}
       <style>{`
         /* Override the default theme variables when custom theme is active */
         :root, .dark {
