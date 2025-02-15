@@ -51,7 +51,7 @@ const areaChartConfig = {
 
 export default function Charts() {
   return (
-    <section id="charts" className="py-24 bg-muted">
+    <section id="charts" className="py-24 bg-muted/50">
       <div className="container mx-auto px-2">
         <h2 className="text-3xl font-bold text-center mb-12">
           Data Visualization

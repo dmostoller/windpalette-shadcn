@@ -1,37 +1,78 @@
+import Image from "next/image";
+import { Heart } from "lucide-react";
+
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="py-6 px-2 md:px-8 md:py-0">
-      <div className="container mx-auto flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-        <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-          <a
-            href="https://windpalette.com"
-            target="_blank"
-            rel="noreferrer"
-            className="font-medium underline underline-offset-4"
-          >
-            WindPalette
-          </a>{" "}
-          makes it easy to generate and customize stunning color themes for{" "}
-          <a
-            href="https://ui.shadcn.com"
-            target="_blank"
-            rel="noreferrer"
-            className="font-medium underline underline-offset-4"
-          >
-            shadcn/ui
-          </a>
-          . Design, preview, and export your theme in minutes. View the source
-          code for this demo on{" "}
-          <a
-            href="https://github.com/dmostoller/windpalette-shadcn"
-            target="_blank"
-            rel="noreferrer"
-            className="font-medium underline underline-offset-4"
-          >
-            GitHub
-          </a>
-          .
-        </p>
+    <footer className="bg-background py-8 border-t">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
+          <div className="flex items-center space-x-2">
+            <Image
+              src="/windpalettelogo.png"
+              alt="WindPalette"
+              width={28}
+              height={28}
+              className="rounded-full"
+            />
+            <a
+              href="https://windpalette.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium hover:underline"
+            >
+              WindPalette
+            </a>
+            <span className="hidden md:inline">&copy; {currentYear}</span>
+          </div>
+
+          <div className="mt-4 md:mt-0">
+            Made with{" "}
+            <Heart className="inline-block h-4 w-4 text-red-500 align-middle" />{" "}
+            by{" "}
+            <a
+              href="https://windpalette.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium hover:underline"
+            >
+              WindPalette
+            </a>
+            .
+            <span className="block md:inline">
+              &nbsp;Powered by{" "}
+              <a
+                href="https://ui.shadcn.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium hover:underline"
+              >
+                shadcn/ui
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://tailwindcss.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium hover:underline"
+              >
+                Tailwind CSS
+              </a>
+            </span>
+            <span className="block md:inline">
+              &nbsp;View source on{" "}
+              <a
+                href="https://github.com/dmostoller/windpalette-shadcn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium hover:underline"
+              >
+                GitHub
+              </a>
+            </span>
+          </div>
+        </div>
       </div>
     </footer>
   );
