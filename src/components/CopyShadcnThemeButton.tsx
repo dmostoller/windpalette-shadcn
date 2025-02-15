@@ -80,7 +80,7 @@ export default function CopyShadcnThemeButton({
     <Dialog>
       <DialogTrigger asChild>
         <Button
-          variant="outline"
+          variant="secondary"
           className="gap-2"
           disabled={!mounted || !colors.primary}
         >
