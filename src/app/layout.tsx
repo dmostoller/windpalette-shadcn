@@ -27,9 +27,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <ThemeInjector />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
@@ -39,6 +36,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ThemeInjector />
           <main className="pt-[73px]">{children}</main>
           <Toaster />
         </ThemeProvider>

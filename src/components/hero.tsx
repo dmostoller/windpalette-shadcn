@@ -1,8 +1,15 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { BookOpen, Palette } from "lucide-react";
+import { Palette } from "lucide-react";
 import Link from "next/link";
+import CopyShadcnThemeButton from "@/components/CopyShadcnThemeButton";
+import { getThemeFromURL } from "@/lib/generate-theme";
 
 export default function Hero() {
+  const colors = getThemeFromURL();
+  console.log("colors", colors);
+
   return (
     <section className="py-24 text-center">
       <div className="container px-4 md:px-6 mx-auto">
@@ -24,16 +31,11 @@ export default function Hero() {
               <div className="flex justify-center space-x-2">
                 <Link href="https://www.windpalette.com/app">
                   <Button>
-                    Create Your Theme
                     <Palette className="ml-2 h-4 w-4" />
+                    Create Another Theme
                   </Button>
                 </Link>
-                <Link href="#component-gallery">
-                  <Button variant="secondary">
-                    View Components
-                    <BookOpen className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
+                <CopyShadcnThemeButton />
               </div>
             </div>
           </div>
