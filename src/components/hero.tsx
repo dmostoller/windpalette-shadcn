@@ -28,9 +28,9 @@ export default function Hero() {
               </div>
             </div>
             <div className="w-full max-w-sm space-y-2 mx-auto">
-              <div className="flex justify-center space-x-2">
+              <div className="flex justify-center flex-col md:flex-row gap-2">
                 <Link href="https://www.windpalette.com/app">
-                  <Button>
+                  <Button className="w-full">
                     <Palette className="ml-2 h-4 w-4" />
                     Create Another Theme
                   </Button>

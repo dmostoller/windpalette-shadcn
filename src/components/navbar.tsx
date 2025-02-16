@@ -42,7 +42,7 @@ export default function Navbar() {
                 <Palette className="w-4 h-4 text-primary" />
               </div>
             </div>
-            Shadcn/ui Theme Demo
+            <span className="text-base md:text-xl">Shadcn/ui Theme Demo</span>
           </div>
         </div>
 
@@ -71,9 +71,7 @@ export default function Navbar() {
             <DrawerContent>
               <DrawerHeader>
                 <DrawerTitle>Navigation</DrawerTitle>
-                <DrawerDescription>
-                  Access all sections of the site
-                </DrawerDescription>
+                <DrawerDescription>Mobile Drawer</DrawerDescription>
               </DrawerHeader>
               <div className="px-4">
                 <div className="flex flex-col space-y-3">
